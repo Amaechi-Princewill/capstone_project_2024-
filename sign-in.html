@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="icon" type="image/x-icon" href="img/img3.avif" />
+    <style>
+        body {
+            font-family: 'Trebuchet MS', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            margin: 0;
+            background-image: url(img/imgbg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .login-container {
+            background: #deffa1;
+            padding: 60px;
+            border-radius: 20px; 
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            width: 400px; 
+            max-width: 100%;
+        }
+        .login-container h2 {
+            margin-top: 0;
+            font-size: 50px;
+            text-align: center; 
+        }
+        .login-container label {
+            display: block;
+            margin-bottom: 12px; 
+            font-size: 25px; 
+        }
+        .login-container input[type="text"],
+        .login-container input[type="email"],
+        .login-container input[type="tel"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px; 
+            border: 1px solid #000000;
+            border-radius: 40px; 
+            font-size: 25px;
+        }
+        .login-container input[type="checkbox"] {
+            margin-right: 12px; 
+            transform: scale(2); 
+        }
+        .login-container button {
+            background-color: #008521;
+            color: #fff;
+            border: none;
+            padding: 15px; 
+            width: 50%;
+            border-radius: 20px; 
+            cursor: pointer;
+            font-size: 20px;
+            text-align: center; 
+        }
+        .login-container button:hover {
+            background-color: #165f0c;
+        }
+        .login-container .forgot-password,
+        .login-container .register-link {
+            display: block;
+            margin-top: 15px; 
+            text-align: center;
+        }
+        .login-container .forgot-password a,
+        .login-container .register-link a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 18px; 
+        }
+        .login-container .forgot-password a:hover,
+        .login-container .register-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="homepage.html" method="get">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telephone">Telephone Number:</label>
+            <input type="tel" id="telephone" name="telephone" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label>
+                <input type="checkbox" id="show-password">
+                Show Password
+            </label>
+
+            <label>
+                <input type="checkbox" id="keep-logged-in" name="keep-logged-in">
+                Keep me logged in
+            </label>
+
+            <button type="submit">Submit</button>
+
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+
+            <div class="register-link">
+                <p>Don't have an account? <a href="#">Register here</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('show-password').addEventListener('change', function() {
+            var passwordField = document.getElementById('password');
+            if (this.checked) {
+                passwordField.type = 'text';
+            } else {
+                passwordField.type = 'password';
+            }
+        });
+    </script>
+</body>
+</html>

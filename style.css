@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Segoe UI", "Open Sans", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+html,
+body {
+  height: 100%;
+}
+.logo {
+  padding-left: 50px;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  background-color: #79b8eb;
+}
+nav {
+  flex: 1;
+  text-align: right;
+}
+nav ul {
+  display: inline-block;
+  list-style-type: none;
+}
+nav ul li {
+  display: inline-block;
+  margin: 30px;
+}
+.navmenu li {
+  display: inline-block;
+  margin: 0px;
+  position: relative;
+}
+
+.navmenu li:hover {
+  background-color: rgba(0, 0, 0, 0.192);
+  border-radius: 5px;
+}
+
+.navmenu a {
+  display: block;
+  padding: 10px 15px;
+  color: rgb(0, 0, 0);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+a {
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  font-family: Impact, sans-serif;
+}
+.container {
+  max-width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-image: url(img/img6.avif);
+  background-position: center;
+  background-size: cover;
+  height: 800px;
+  width: 100%;
+}
+.btn {
+  display: inline-block;
+  background-color: rgb(43, 58, 28);
+  color: white;
+  padding: 8px 30px;
+  margin: 30px 0;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 55px;
+  font-family: "Times New Roman", Times, serif;
+}
+footer {
+  background-color: rgb(187, 235, 250);
+  padding: 30px 20px;
+  color: rgb(17, 34, 0);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+  flex: 1;
+  padding: 10px;
+}
+
+.footer-left h2 {
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 24px;
+}
+
+.footer-middle ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-middle ul li {
+  margin-bottom: 10px;
+}
+
+.footer-middle ul li a {
+  color: rgb(17, 34, 0);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-middle ul li a:hover {
+  color: rgb(0, 102, 204);
+}
+.menu-icon {
+  width: 28px;
+  margin-left: 20px;
+  display: none;
+}
+@media only screen and (max-width: 800px) {
+  nav ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: #0a76ce;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    padding: 0;
+  }
+  nav ul.show {
+    display: flex;
+  }
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+  }
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+}
